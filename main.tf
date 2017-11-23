@@ -153,7 +153,7 @@ resource "aws_elasticache_subnet_group" "elasticache" {
 # Management subnet
 ##################
 resource "aws_subnet" "management" {
-  count = "${length(var.management_subnets) > 0 ? 1 : 0}"
+  count = "${length(var.management_subnets)}"
 
   vpc_id            = "${aws_vpc.this.id}"
   cidr_block        = "${var.management_subnets[count.index]}"
