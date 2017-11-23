@@ -46,8 +46,8 @@ variable "create_database_subnet_group" {
   default     = true
 }
 
-variable "zones" {
-  description = "A list of availability zones in the region"
+variable "availability_zones" {
+  description = "A list of availability availability_zones in the region"
   default     = []
 }
 
